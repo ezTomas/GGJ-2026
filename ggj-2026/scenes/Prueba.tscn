@@ -2,24 +2,79 @@
 
 [ext_resource type="Script" uid="uid://bbsaub1x6or16" path="res://scenes/prueba.gd" id="1_e66qu"]
 [ext_resource type="PackedScene" uid="uid://bacopleqxm6r7" path="res://scenes/Mask.tscn" id="2_iyvkr"]
+[ext_resource type="PackedScene" uid="uid://d3gsbnwpt8pnf" path="res://scenes/marcas/spawns.tscn" id="3_f48f8"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="4_4kivy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyvkr"]
+size = Vector2(1168, 20)
 
 [node name="Prueba" type="Node2D" unique_id=570404761]
 script = ExtResource("1_e66qu")
 
-[node name="Marker2D" type="Marker2D" parent="." unique_id=504330270]
-position = Vector2(145, 524)
-
-[node name="Marker2D2" type="Marker2D" parent="." unique_id=668808674]
-position = Vector2(501, 283)
-
-[node name="Marker2D3" type="Marker2D" parent="." unique_id=775590668]
-position = Vector2(848, 542)
-
-[node name="Marker2D4" type="Marker2D" parent="." unique_id=1752765974]
-position = Vector2(866, 129)
-
-[node name="Marker2D5" type="Marker2D" parent="." unique_id=827383055]
-position = Vector2(203, 148)
-
 [node name="Mask" parent="." unique_id=1398021520 instance=ExtResource("2_iyvkr")]
-position = Vector2(276, 231)
+position = Vector2(-500, 231)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1273621488]
+position = Vector2(585, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2146239080]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1603308047]
+position = Vector2(585, 641)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1193285240]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=567768648]
+position = Vector2(8, 311)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1225234166]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1384470717]
+position = Vector2(1155, 311)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=315644989]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="Ubicaciones" type="Node2D" parent="." unique_id=740970029]
+
+[node name="Spawns" parent="Ubicaciones" unique_id=980429044 instance=ExtResource("3_f48f8")]
+unique_name_in_owner = true
+position = Vector2(464, 342)
+horizontal = true
+
+[node name="Spawns2" parent="Ubicaciones" unique_id=921365187 instance=ExtResource("3_f48f8")]
+unique_name_in_owner = true
+position = Vector2(943, 507)
+velocidad = 2
+vertical = true
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1332624593]
+position = Vector2(-47, 334)
+scale = Vector2(1, 5.119999)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1671295402]
+position = Vector2(1205, 334)
+scale = Vector2(1, 5.119999)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1138393203]
+position = Vector2(577.0001, 698)
+rotation = 1.5707964
+scale = Vector2(1, 9.399998)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1173835975]
+position = Vector2(574.00006, -46)
+rotation = 1.5707964
+scale = Vector2(1, 9.399998)
+texture = ExtResource("4_4kivy")

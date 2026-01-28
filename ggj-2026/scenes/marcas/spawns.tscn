@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://d3gsbnwpt8pnf"]
+
+[ext_resource type="Script" uid="uid://bneyqdqvklldj" path="res://scenes/marcas/marker_2d.gd" id="1_rh3gd"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="2_sdjux"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_4c4og"]
+radius = 50.01
+
+[node name="Spawns" type="Area2D" unique_id=980429044]
+script = ExtResource("1_rh3gd")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1028977474]
+texture = ExtResource("2_sdjux")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=189521177]
+shape = SubResource("CircleShape2D_4c4og")
+
+[node name="RaycastVertical" type="RayCast2D" parent="." unique_id=357558837]
+target_position = Vector2(0, 66)
+
+[node name="RaycastVertical2" type="RayCast2D" parent="." unique_id=177277092]
+rotation = 3.1415927
+target_position = Vector2(0, 66)
+
+[node name="RaycastHorizontal" type="RayCast2D" parent="." unique_id=2102953752]
+target_position = Vector2(63, 1)
+
+[node name="RaycastHorizontal2" type="RayCast2D" parent="." unique_id=2048271786]
+rotation = 3.1415927
+target_position = Vector2(63, 1)
