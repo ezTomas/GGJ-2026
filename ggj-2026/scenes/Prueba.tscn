@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://dxgunrxhlu6ys"]
+
+[ext_resource type="Script" uid="uid://bbsaub1x6or16" path="res://scenes/prueba.gd" id="1_e66qu"]
+[ext_resource type="PackedScene" uid="uid://bacopleqxm6r7" path="res://scenes/Mask.tscn" id="2_iyvkr"]
+
+[node name="Prueba" type="Node2D" unique_id=570404761]
+script = ExtResource("1_e66qu")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=504330270]
+position = Vector2(145, 524)
+
+[node name="Marker2D2" type="Marker2D" parent="." unique_id=668808674]
+position = Vector2(501, 283)
+
+[node name="Marker2D3" type="Marker2D" parent="." unique_id=775590668]
+position = Vector2(848, 542)
+
+[node name="Marker2D4" type="Marker2D" parent="." unique_id=1752765974]
+position = Vector2(866, 129)
+
+[node name="Marker2D5" type="Marker2D" parent="." unique_id=827383055]
+position = Vector2(203, 148)
+
+[node name="Mask" parent="." unique_id=1398021520 instance=ExtResource("2_iyvkr")]
+position = Vector2(276, 231)
