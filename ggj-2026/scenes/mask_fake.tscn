@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://c0ie8hx71ss4e"]
+
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_xhklc"]
+
+[node name="MaskFake" type="Node2D" unique_id=1635316234]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1368562088]
+modulate = Color(0, 0, 0, 1)
+texture = ExtResource("1_xhklc")
