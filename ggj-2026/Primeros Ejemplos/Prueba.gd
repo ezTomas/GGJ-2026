@@ -7,4 +7,5 @@ func _input_event(viewport, event, shape_idx):
 		on_click()
 
 func on_click():
-	Global.points += 1
+	Global.points += 100
+	get_tree().reload_current_scene()
