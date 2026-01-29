@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://dxgunrxhlu6ys"]
+
+[ext_resource type="Script" uid="uid://bbsaub1x6or16" path="res://scenes/prueba.gd" id="1_e66qu"]
+[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="4_4kivy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_iyvkr"]
+size = Vector2(1168, 20)
+
+[node name="Prueba" type="Node2D" unique_id=570404761]
+script = ExtResource("1_e66qu")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1273621488]
+position = Vector2(585, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2146239080]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1603308047]
+position = Vector2(585, 641)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1193285240]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=567768648]
+position = Vector2(8, 311)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1225234166]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1384470717]
+position = Vector2(1155, 311)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=315644989]
+position = Vector2(-9, 0)
+shape = SubResource("RectangleShape2D_iyvkr")
+
+[node name="Icon" type="Sprite2D" parent="." unique_id=1332624593]
+z_index = 2
+position = Vector2(-47, 334)
+scale = Vector2(1, 5.119999)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon2" type="Sprite2D" parent="." unique_id=1671295402]
+z_index = 2
+position = Vector2(1205, 334)
+scale = Vector2(1, 5.119999)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon3" type="Sprite2D" parent="." unique_id=1138393203]
+z_index = 2
+position = Vector2(577.0001, 698)
+rotation = 1.5707964
+scale = Vector2(1, 9.399998)
+texture = ExtResource("4_4kivy")
+
+[node name="Icon4" type="Sprite2D" parent="." unique_id=1173835975]
+z_index = 2
+position = Vector2(574.00006, -46)
+rotation = 1.5707964
+scale = Vector2(1, 9.399998)
+texture = ExtResource("4_4kivy")
