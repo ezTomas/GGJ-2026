@@ -8,7 +8,7 @@
 [node name="Sprite2D" type="Sprite2D" unique_id=749957304]
 texture = ExtResource("1_71jk5")
 
-[node name="Area2D" type="Area2D" parent="." unique_id=2123180649]
+[node name="Area2D" type="Area2D" parent="." unique_id=2123180649 groups=["Mascara"]]
 script = ExtResource("2_mt5rx")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=590618201]
