@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://dbbaw07323k8n"]
+
+[ext_resource type="Script" uid="uid://cc6c0cm58kj3p" path="res://Primeros Ejemplos/escenario_prueba.gd" id="1_e1usg"]
+[ext_resource type="PackedScene" uid="uid://bj53a254d4hnt" path="res://Primeros Ejemplos/prueba.tscn" id="1_j6jcl"]
+[ext_resource type="Script" uid="uid://885n4kw77lc" path="res://Primeros Ejemplos/panel.gd" id="3_iyoxj"]
+
+[node name="Escenario_prueba" type="Node2D" unique_id=424929458]
+script = ExtResource("1_e1usg")
+
+[node name="Sprite2D" parent="." unique_id=749957304 instance=ExtResource("1_j6jcl")]
+position = Vector2(546, 303)
+
+[node name="Label" type="Label" parent="." unique_id=1996047970]
+offset_left = 1111.0
+offset_top = 1.0
+offset_right = 1151.0
+offset_bottom = 24.0
+
+[node name="Panel" type="Panel" parent="." unique_id=703371994]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("3_iyoxj")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=703540836]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_constants/separation = 1
+
+[node name="Minutes" type="Label" parent="Panel/HBoxContainer" unique_id=1598883366]
+layout_mode = 2
+text = "00:"
+horizontal_alignment = 2
+
+[node name="Seconds" type="Label" parent="Panel/HBoxContainer" unique_id=1796689844]
+layout_mode = 2
+text = "00."
+horizontal_alignment = 2
+
+[node name="Msecs" type="Label" parent="Panel/HBoxContainer" unique_id=1870357929]
+layout_mode = 2
+text = "00"
+horizontal_alignment = 2

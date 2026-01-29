@@ -11,8 +11,17 @@ config_version=5
 [application]
 
 config/name="GGJ-2026"
+run/main_scene="uid://dbbaw07323k8n"
 config/features=PackedStringArray("4.6", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Global="*uid://busidwc04ir6k"
+
+[global_group]
+
+Mascara=""
 
 [physics]
 
