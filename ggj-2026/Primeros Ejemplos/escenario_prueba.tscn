@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://cc6c0cm58kj3p" path="res://Primeros Ejemplos/escenario_prueba.gd" id="1_e1usg"]
 [ext_resource type="PackedScene" uid="uid://bj53a254d4hnt" path="res://Primeros Ejemplos/prueba.tscn" id="1_j6jcl"]
 [ext_resource type="Script" uid="uid://885n4kw77lc" path="res://Primeros Ejemplos/panel.gd" id="3_iyoxj"]
+[ext_resource type="FontFile" uid="uid://baterf741a4qy" path="res://Bubblegum.ttf" id="4_s3mbw"]
 
 [node name="Escenario_prueba" type="Node2D" unique_id=424929458]
 script = ExtResource("1_e1usg")
@@ -11,33 +12,49 @@ script = ExtResource("1_e1usg")
 position = Vector2(546, 303)
 
 [node name="Label" type="Label" parent="." unique_id=1996047970]
-offset_left = 1111.0
-offset_top = 1.0
-offset_right = 1151.0
-offset_bottom = 24.0
+offset_left = 1014.0
+offset_top = -3.0
+offset_right = 1102.0
+offset_bottom = 56.0
+scale = Vector2(1.0846261, 1)
+theme_override_colors/font_color = Color(1, 0.43529412, 0, 1)
+theme_override_fonts/font = ExtResource("4_s3mbw")
+theme_override_font_sizes/font_size = 46
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [node name="Panel" type="Panel" parent="." unique_id=703371994]
-offset_right = 40.0
+offset_right = 143.215
 offset_bottom = 40.0
 script = ExtResource("3_iyoxj")
 
 [node name="HBoxContainer" type="HBoxContainer" parent="Panel" unique_id=703540836]
 layout_mode = 0
-offset_right = 40.0
+offset_right = 67.0
 offset_bottom = 40.0
 theme_override_constants/separation = 1
 
 [node name="Minutes" type="Label" parent="Panel/HBoxContainer" unique_id=1598883366]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.84969085, 0, 0.004450073, 1)
+theme_override_fonts/font = ExtResource("4_s3mbw")
+theme_override_font_sizes/font_size = 30
 text = "00:"
 horizontal_alignment = 2
 
 [node name="Seconds" type="Label" parent="Panel/HBoxContainer" unique_id=1796689844]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("4_s3mbw")
+theme_override_font_sizes/font_size = 30
 text = "00."
 horizontal_alignment = 2
 
 [node name="Msecs" type="Label" parent="Panel/HBoxContainer" unique_id=1870357929]
 layout_mode = 2
+theme_override_colors/font_color = Color(0.8509804, 0, 0.003921569, 1)
+theme_override_fonts/font = ExtResource("4_s3mbw")
+theme_override_font_sizes/font_size = 30
 text = "00"
 horizontal_alignment = 2

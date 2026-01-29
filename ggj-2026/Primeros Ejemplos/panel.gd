@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 	minutes = fmod(time, 3600) / 60
 	$HBoxContainer/Minutes.text = "%02d:" % minutes
 	$HBoxContainer/Seconds.text = "%02d." % seconds
-	$HBoxContainer/Msecs.text = "%03d" % msec
+	$HBoxContainer/Msecs.text = "%02d" % msec
 
 func stop():
 	set_process(false)
