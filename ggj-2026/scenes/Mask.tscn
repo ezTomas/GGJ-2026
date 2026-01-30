@@ -15,5 +15,14 @@ texture = ExtResource("1_eic0r")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=214594373]
 shape = SubResource("CircleShape2D_3d20y")
 
+[node name="Rotacion" type="Timer" parent="." unique_id=1980912120]
+autostart = true
+
+[node name="Movimiento" type="Timer" parent="." unique_id=1225814074]
+wait_time = 3.0
+autostart = true
+
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[connection signal="timeout" from="Rotacion" to="." method="_on_rotacion_timeout"]
+[connection signal="timeout" from="Movimiento" to="." method="_on_movimiento_timeout"]
