@@ -24,15 +24,28 @@ func spawn_mask():
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click") and kill:
-		print("2")
-		queue_free()
-		print("S")
+		puntos()
+		get_tree().reload_current_scene()
+		
+		
 
 func _on_mouse_entered() -> void:
 	kill = true
 	
+func puntos():
+	Global.points += 100
 
 
 func _on_mouse_exited() -> void:
 	kill = false
+	pass # Replace with function body.
+
+
+func _on_rotacion_timeout() -> void:
+	rotate(randf_range(-90,90))
+	pass # Replace with function body.
+
+
+func _on_movimiento_timeout() -> void:
+	position = Vector2(randf_range(50,1000),randf_range(50, 600))
 	pass # Replace with function body.
