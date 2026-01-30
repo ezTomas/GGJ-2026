@@ -1,0 +1,66 @@
+[gd_scene format=3 uid="uid://2j8pn6m1gqr5"]
+
+[ext_resource type="Script" uid="uid://cp5foy2ibr5ns" path="res://scenes/Menu/menu_principal.gd" id="1_eorvf"]
+[ext_resource type="AudioStream" uid="uid://5pw05jyvpaye" path="res://Sonidos/Generales/Menu.mp3" id="2_yqycs"]
+[ext_resource type="AudioStream" uid="uid://clljp2644ssa4" path="res://Sonidos/Generales/este me jijee y lo puse, usenlo como quieran.mp3" id="3_npvff"]
+
+[node name="Menu_Principal" type="Control" unique_id=616118656]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_eorvf")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1438145084]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=930727274]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -4.0
+offset_top = -10.0
+offset_right = 4.0
+offset_bottom = 10.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=1766133592]
+layout_mode = 2
+theme_override_constants/margin_top = 287
+
+[node name="BotonJugar" type="Button" parent="TextureRect/VBoxContainer" unique_id=1093602422]
+layout_mode = 2
+text = "Jugar
+"
+
+[node name="MarginContainer2" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=1438717862]
+layout_mode = 2
+theme_override_constants/margin_top = 29
+
+[node name="BotonSalir" type="Button" parent="TextureRect/VBoxContainer" unique_id=928783912]
+layout_mode = 2
+text = "Salir
+"
+
+[node name="Musica_Menu" type="AudioStreamPlayer2D" parent="." unique_id=1444902313]
+stream = ExtResource("2_yqycs")
+volume_db = -4.86
+autoplay = true
+
+[node name="BotonJugar" type="AudioStreamPlayer2D" parent="." unique_id=2077041662]
+stream = ExtResource("3_npvff")
+volume_db = -10.692
+
+[connection signal="pressed" from="TextureRect/VBoxContainer/BotonJugar" to="." method="_on_boton_jugar_pressed"]
+[connection signal="pressed" from="TextureRect/VBoxContainer/BotonSalir" to="." method="_on_boton_salir_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://clljp2644ssa4"
+path="res://.godot/imported/este me jijee y lo puse, usenlo como quieran.mp3-9f179ff9384f96a7915359a4e46671e1.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Generales/este me jijee y lo puse, usenlo como quieran.mp3"
+dest_files=["res://.godot/imported/este me jijee y lo puse, usenlo como quieran.mp3-9f179ff9384f96a7915359a4e46671e1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
