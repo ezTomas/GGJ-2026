@@ -2,7 +2,6 @@ extends Node
 
 var points: int
 
-
 var time: float = 300
 var minutes: float = 0
 var seconds: int = 0
