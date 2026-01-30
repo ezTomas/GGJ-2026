@@ -1,8 +1,12 @@
 [gd_scene format=3 uid="uid://2j8pn6m1gqr5"]
 
 [ext_resource type="Script" uid="uid://cp5foy2ibr5ns" path="res://scenes/Menu/menu_principal.gd" id="1_eorvf"]
+[ext_resource type="Texture2D" uid="uid://id836ex84uy6" path="res://Sprites/Menu/Menu.png" id="2_6rkf3"]
 [ext_resource type="AudioStream" uid="uid://5pw05jyvpaye" path="res://Sonidos/Generales/Menu.mp3" id="2_yqycs"]
+[ext_resource type="Texture2D" uid="uid://bi7urgu67t385" path="res://Sprites/Menu/Susurros.png" id="3_7km2b"]
 [ext_resource type="AudioStream" uid="uid://clljp2644ssa4" path="res://Sonidos/Generales/este me jijee y lo puse, usenlo como quieran.mp3" id="3_npvff"]
+[ext_resource type="Texture2D" uid="uid://nn4cpi8nw4nv" path="res://Sprites/Menu/Jugar.png" id="4_08qkv"]
+[ext_resource type="Texture2D" uid="uid://cyqtwnj5mjl66" path="res://Sprites/Menu/salir.png" id="5_6hp61"]
 
 [node name="Menu_Principal" type="Control" unique_id=616118656]
 layout_mode = 3
@@ -20,6 +24,28 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+scale = Vector2(0.9971634, 1.0036964)
+texture = ExtResource("2_6rkf3")
+expand_mode = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="TextureRect" unique_id=252510931]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -482.5
+offset_right = 482.5
+offset_bottom = 68.0
+grow_horizontal = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="TextureRect/VBoxContainer2" unique_id=1545995319]
+layout_mode = 2
+theme_override_constants/margin_top = 157
+
+[node name="TextureRect2" type="TextureRect" parent="TextureRect/VBoxContainer2" unique_id=946318202]
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_7km2b")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="TextureRect" unique_id=930727274]
 layout_mode = 1
@@ -41,8 +67,8 @@ theme_override_constants/margin_top = 287
 
 [node name="BotonJugar" type="Button" parent="TextureRect/VBoxContainer" unique_id=1093602422]
 layout_mode = 2
-text = "Jugar
-"
+icon = ExtResource("4_08qkv")
+flat = true
 
 [node name="MarginContainer2" type="MarginContainer" parent="TextureRect/VBoxContainer" unique_id=1438717862]
 layout_mode = 2
@@ -50,8 +76,10 @@ theme_override_constants/margin_top = 29
 
 [node name="BotonSalir" type="Button" parent="TextureRect/VBoxContainer" unique_id=928783912]
 layout_mode = 2
-text = "Salir
+text = "
 "
+icon = ExtResource("5_6hp61")
+flat = true
 
 [node name="Musica_Menu" type="AudioStreamPlayer2D" parent="." unique_id=1444902313]
 stream = ExtResource("2_yqycs")
