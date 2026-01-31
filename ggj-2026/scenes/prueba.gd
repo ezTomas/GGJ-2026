@@ -9,11 +9,20 @@ var mask_fake = preload("res://scenes/mask_fake.tscn")
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
 @onready var texto_audios: TextureRect = $Control/Texto_audios
 
+@onready var check_bien: AudioStreamPlayer2D = $Check_bien
+@onready var check_bien_imageb: TextureRect = $Control/Check_bien_imageb
+@onready var check_mal_imageb: TextureRect = $Control/Check_mal_imageb
+
 func _ready() -> void:
+	check_bien_imageb.visible = false
+	check_mal_imageb.visible = false
 	spawn_mask(1)
 	spawn_aleatorio_mask_fakes(4)
 	avance()
 	audios_reproduccion()
+	check_bien_()
+	
+
 	timer.text = (str(Global.points))
 	Global.juego_en_marcha = true
 	texto_audios.visible = false
@@ -53,7 +62,25 @@ func audios_reproduccion():
 	var index = Global.sprite_index % audios.size()
 	audio_stream_player_2d.stream = audios[index]
 	audio_stream_player_2d.play()
-	
+
+func check_bien_():
+	if Global.check_bien == true:
+		audio_stream_player_2d.stop()
+		check_bien_imageb.visible = true
+		check_bien.play()
+		await  get_tree().create_timer(1.0).timeout
+		check_bien_imageb.visible = false
+		audio_stream_player_2d.play()
+		Global.check_bien = false
+
+#func imagen_check_mal():
+	#if Global.check_mal == true:
+		#print(Global.points)
+		#check_mal_imageb.visible = true
+		#await  get_tree().create_timer(1.0).timeout
+		#check_mal_imageb.visible = false
+		#Global.check_mal = false
+
 
 func avance():
 	if Global.points > 1000 and Global.points <= 2000:

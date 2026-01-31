@@ -9,6 +9,8 @@ var kill = false
 @onready var spawn_5 : Area2D = $"../Marker2D5"
 
 
+
+
 func _ready() -> void:
 	#spawn_mask()
 	pass
@@ -26,6 +28,7 @@ func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click") and kill:
 		puntos()
 		Global.sprite_index += 1
+		Global.check_bien = true
 		get_tree().reload_current_scene()
 
 		

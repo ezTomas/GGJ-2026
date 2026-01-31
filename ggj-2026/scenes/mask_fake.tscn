@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://m52b7apoi6e7" path="res://scenes/mask_fake.gd" id="1_up7h0"]
 [ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="1_xhklc"]
+[ext_resource type="AudioStream" uid="uid://dxeejjrexuum" path="res://Sonidos/check MAL.mp3" id="4_3nvrc"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_up7h0"]
 radius = 66.75328
@@ -21,6 +22,10 @@ autostart = true
 [node name="Movimiento" type="Timer" parent="." unique_id=1898344006]
 wait_time = 3.0
 autostart = true
+
+[node name="Check_mal" type="AudioStreamPlayer2D" parent="." unique_id=716056258]
+stream = ExtResource("4_3nvrc")
+volume_db = -5.652
 
 [connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
 [connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]

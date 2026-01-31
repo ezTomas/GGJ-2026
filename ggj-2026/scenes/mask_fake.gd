@@ -2,15 +2,14 @@ extends Area2D
 
 var click : bool
 
+@onready var check_mal: AudioStreamPlayer2D = $Check_mal
 
-func _physics_process(delta: float) -> void:
-	
-	pass
-	
+
 func _input(event: InputEvent) -> void:
-	if Input.is_action_pressed("click") and click == true:
+	if Input.is_action_just_pressed("click") and click == true:
+		check_mal.play()
+		#Global.check_mal = true
 		Global.time -= 5
-		
 
 
 func _on_mouse_entered() -> void:

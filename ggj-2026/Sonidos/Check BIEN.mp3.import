@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brnbrad45yiva"
+path="res://.godot/imported/Check BIEN.mp3-c006381bec0cc33c8642803d47a4baef.mp3str"
+
+[deps]
+
+source_file="res://Sonidos/Check BIEN.mp3"
+dest_files=["res://.godot/imported/Check BIEN.mp3-c006381bec0cc33c8642803d47a4baef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -8,6 +8,9 @@ var seconds: int = 0
 var msec: int = 0
 var ranking : Array[int] = []
 
+var check_bien: bool = false
+var check_mal: bool = false
+
 
 
 var sprite_index: int = 0
