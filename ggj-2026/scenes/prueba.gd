@@ -25,16 +25,9 @@ func _physics_process(delta: float) -> void:
 		get_tree().change_scene_to_file("res://scenes/ranking.tscn")
 		Global.points = 0
 
-		label.text = (str(Global.points))
+		timer.text = (str(Global.points))
 		Global.time = 3000
 		
-	print(Global.ranking)
-
-func spawn_aleatorio_mask_fakes(cantidad):
-	for i in cantidad:
-		var new_objeto = mask_fake.instantiate()
-		new_objeto.global_position = Vector2(randi_range(50,1000),randi_range(50,600))
-		add_child(new_objeto)
 
 
 func spawn_mask(cantidad):
