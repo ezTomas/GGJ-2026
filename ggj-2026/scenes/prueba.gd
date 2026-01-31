@@ -24,10 +24,12 @@ func _physics_process(delta: float) -> void:
 
 func spawn_mask(cantidad):
 	for i in range(cantidad): 
+		var index = Global.sprite_index % sprites_posibles.size()
 		var new_objeto = mask.instantiate() 
-		new_objeto.global_position = Vector2(randi_range(50,1000),randi_range(50,600)) 
-		new_objeto.get_node("Sprite2D").texture = sprites_posibles[Global.sprite_index] 
+		new_objeto.global_position = Vector2(randi_range(50,1000),randi_range(50,600))
+		new_objeto.get_node("Sprite2D").texture = sprites_posibles[index] 
 		add_child(new_objeto)
+
 
 func spawn_aleatorio_mask_fakes(cantidad):
 	var pool = sprites_posibles.duplicate()
