@@ -12,6 +12,7 @@ var mask_fake = preload("res://scenes/mask_fake.tscn")
 @onready var check_bien: AudioStreamPlayer2D = $Check_bien
 @onready var check_bien_imageb: TextureRect = $Control/Check_bien_imageb
 @onready var check_mal_imageb: TextureRect = $Control/Check_mal_imageb
+@onready var musica_ambiente: AudioStreamPlayer2D = $Musica_Ambiente
 
 func _ready() -> void:
 	check_bien_imageb.visible = false
@@ -60,6 +61,7 @@ func spawn_aleatorio_mask_fakes(cantidad):
 
 func audios_reproduccion():
 	var index = Global.sprite_index % audios.size()
+	musica_ambiente.stop()
 	audio_stream_player_2d.stream = audios[index]
 	audio_stream_player_2d.play()
 
@@ -95,8 +97,10 @@ func avance():
 
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("E"):
+		musica_ambiente.stop()
 		audio_stream_player_2d.play()
 
 func _on_audio_stream_player_2d_finished() -> void:
+	musica_ambiente.play()
 	audio_stream_player_2d.stop()
 	texto_audios.visible = true
