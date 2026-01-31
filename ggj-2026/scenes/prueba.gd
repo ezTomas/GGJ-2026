@@ -7,6 +7,7 @@ var mask_fake = preload("res://scenes/mask_fake.tscn")
 @export var sprites_posibles: Array[Texture2D]
 @export var audios: Array[AudioStream]
 @onready var audio_stream_player_2d: AudioStreamPlayer2D = $AudioStreamPlayer2D
+@onready var texto_audios: TextureRect = $Control/Texto_audios
 
 func _ready() -> void:
 	spawn_mask(1)
@@ -15,8 +16,7 @@ func _ready() -> void:
 	audios_reproduccion()
 	timer.text = (str(Global.points))
 	Global.juego_en_marcha = true
-
-
+	texto_audios.visible = false
 
 func _physics_process(delta: float) -> void:
 	if Global.time <= 0:
@@ -27,8 +27,6 @@ func _physics_process(delta: float) -> void:
 
 		timer.text = (str(Global.points))
 		Global.time = 3000
-		
-
 
 func spawn_mask(cantidad):
 	for i in range(cantidad): 
@@ -68,6 +66,10 @@ func avance():
 		spawn_aleatorio_mask_fakes(6)
 		pass
 
+func _input(event: InputEvent) -> void:
+	if Input.is_action_just_pressed("E"):
+		audio_stream_player_2d.play()
 
 func _on_audio_stream_player_2d_finished() -> void:
 	audio_stream_player_2d.stop()
+	texto_audios.visible = true
