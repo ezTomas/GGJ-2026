@@ -1,32 +1,39 @@
 [gd_scene format=3 uid="uid://dxgunrxhlu6ys"]
 
 [ext_resource type="Script" uid="uid://bbsaub1x6or16" path="res://scenes/prueba.gd" id="1_e66qu"]
+[ext_resource type="Texture2D" uid="uid://cmkk7ew1rxg7m" path="res://Sprites/Mascaras/Mascara_1_soberbia (3).png" id="2_mk3es"]
 [ext_resource type="FontFile" uid="uid://baterf741a4qy" path="res://Bubblegum.ttf" id="3_4kivy"]
-[ext_resource type="Texture2D" uid="uid://bycdlvhpt3vg" path="res://icon.svg" id="4_4kivy"]
-[ext_resource type="Script" uid="uid://885n4kw77lc" path="res://Primeros Ejemplos/panel.gd" id="4_tff7q"]
+[ext_resource type="Script" uid="uid://ok0vw3sl1ch1" path="res://scenes/timer.gd" id="3_f48f8"]
+[ext_resource type="Texture2D" uid="uid://bhtkuaf3umt01" path="res://Sprites/Mascaras/Mascara_3_ira (1).png" id="3_h6xqs"]
+[ext_resource type="Texture2D" uid="uid://braqpqmcyrqss" path="res://Sprites/Mascaras/Mascara_4_lujuria (1).png" id="4_nnwpc"]
+[ext_resource type="Texture2D" uid="uid://dmqm3etw3sxg5" path="res://Sprites/Mascaras/Mascara_5_pereza (1).png" id="5_gwfhc"]
+[ext_resource type="Texture2D" uid="uid://cm2dbj2sqw4in" path="res://Sprites/Mascaras/Mascara_6_gula (1).png" id="6_7x4p5"]
+[ext_resource type="Texture2D" uid="uid://bo87p07b5lsah" path="res://Sprites/Mascaras/Mascara_7_avaricia (1).png" id="7_q73yr"]
+[ext_resource type="Texture2D" uid="uid://ssumjxlo50kd" path="res://Sprites/Mascaras/Mascara_envidia_2 (1).png" id="8_ag6wn"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_iyvkr"]
-size = Vector2(1168, 20)
+size = Vector2(1168, 7)
 
 [node name="Prueba" type="Node2D" unique_id=570404761]
 script = ExtResource("1_e66qu")
+sprites_posibles = Array[Texture2D]([ExtResource("2_mk3es"), ExtResource("3_h6xqs"), ExtResource("4_nnwpc"), ExtResource("5_gwfhc"), ExtResource("6_7x4p5"), ExtResource("7_q73yr"), ExtResource("8_ag6wn")])
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1273621488]
-position = Vector2(585, 0)
+position = Vector2(587, 3)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2146239080]
-position = Vector2(-9, 0)
+position = Vector2(-9, -6.5)
 shape = SubResource("RectangleShape2D_iyvkr")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1603308047]
-position = Vector2(585, 641)
+position = Vector2(597, 652)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1193285240]
 position = Vector2(-9, 0)
 shape = SubResource("RectangleShape2D_iyvkr")
 
 [node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=567768648]
-position = Vector2(8, 311)
+position = Vector2(-4, 309)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1225234166]
@@ -34,42 +41,12 @@ position = Vector2(-9, 0)
 shape = SubResource("RectangleShape2D_iyvkr")
 
 [node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1384470717]
-position = Vector2(1155, 311)
+position = Vector2(1156, 311)
 rotation = 1.5707964
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=315644989]
 position = Vector2(-9, 0)
 shape = SubResource("RectangleShape2D_iyvkr")
-
-[node name="Icon" type="Sprite2D" parent="." unique_id=1332624593]
-modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(-47, 334)
-scale = Vector2(1, 5.119999)
-texture = ExtResource("4_4kivy")
-
-[node name="Icon2" type="Sprite2D" parent="." unique_id=1671295402]
-modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(1205, 334)
-scale = Vector2(1, 5.119999)
-texture = ExtResource("4_4kivy")
-
-[node name="Icon3" type="Sprite2D" parent="." unique_id=1138393203]
-modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(577.0001, 698)
-rotation = 1.5707964
-scale = Vector2(1, 9.399998)
-texture = ExtResource("4_4kivy")
-
-[node name="Icon4" type="Sprite2D" parent="." unique_id=1173835975]
-modulate = Color(0, 0, 0, 1)
-z_index = 2
-position = Vector2(574.00006, -46)
-rotation = 1.5707964
-scale = Vector2(1, 9.399998)
-texture = ExtResource("4_4kivy")
 
 [node name="Control" type="Control" parent="." unique_id=308752718]
 z_index = 15
@@ -78,7 +55,7 @@ anchors_preset = 0
 offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="Label" type="Label" parent="Control" unique_id=71144084]
+[node name="Timer" type="Label" parent="Control" unique_id=71144084]
 unique_name_in_owner = true
 layout_mode = 0
 offset_left = 962.0
@@ -92,22 +69,17 @@ theme_override_font_sizes/font_size = 46
 text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1
+script = ExtResource("3_f48f8")
 
-[node name="Panel" type="Panel" parent="Control" unique_id=1072626403]
+[node name="HBoxContainer" type="HBoxContainer" parent="Control/Timer" unique_id=1415246873]
 layout_mode = 0
-offset_left = 18.0
-offset_top = 21.0
-offset_right = 161.215
-offset_bottom = 61.0
-script = ExtResource("4_tff7q")
-
-[node name="HBoxContainer" type="HBoxContainer" parent="Control/Panel" unique_id=1415246873]
-layout_mode = 0
-offset_right = 67.0
-offset_bottom = 40.0
+offset_left = -870.34607
+offset_top = -2.0
+offset_right = -740.34607
+offset_bottom = 38.0
 theme_override_constants/separation = 1
 
-[node name="Minutes" type="Label" parent="Control/Panel/HBoxContainer" unique_id=1678174258]
+[node name="Minutes" type="Label" parent="Control/Timer/HBoxContainer" unique_id=1678174258]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.84969085, 0, 0.004450073, 1)
 theme_override_fonts/font = ExtResource("3_4kivy")
@@ -115,7 +87,7 @@ theme_override_font_sizes/font_size = 30
 text = "00:"
 horizontal_alignment = 2
 
-[node name="Seconds" type="Label" parent="Control/Panel/HBoxContainer" unique_id=1037850713]
+[node name="Seconds" type="Label" parent="Control/Timer/HBoxContainer" unique_id=1037850713]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8509804, 0, 0.003921569, 1)
 theme_override_fonts/font = ExtResource("3_4kivy")
@@ -123,7 +95,7 @@ theme_override_font_sizes/font_size = 30
 text = "00."
 horizontal_alignment = 2
 
-[node name="Msecs" type="Label" parent="Control/Panel/HBoxContainer" unique_id=2135168875]
+[node name="Msecs" type="Label" parent="Control/Timer/HBoxContainer" unique_id=2135168875]
 layout_mode = 2
 theme_override_colors/font_color = Color(0.8509804, 0, 0.003921569, 1)
 theme_override_fonts/font = ExtResource("3_4kivy")
