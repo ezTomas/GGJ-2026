@@ -19,12 +19,14 @@ config/icon="res://icon.svg"
 
 Global="*uid://busidwc04ir6k"
 
-
 [display]
 
 window/size/mode=2
 window/stretch/mode="viewport"
 
+[global_group]
+
+mask_fake=""
 
 [input]
 

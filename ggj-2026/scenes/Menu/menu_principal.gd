@@ -9,7 +9,9 @@ func _on_boton_jugar_pressed() -> void:
 	musica_menu.stop()
 	boton_jugar.play()
 	await  get_tree().create_timer(1.0).timeout
-	get_tree().change_scene_to_file("res://Primeros Ejemplos/escenario_prueba.tscn")
+	Global.time = 300
+	Global.points = 0
+	get_tree().change_scene_to_file("res://scenes/Prueba.tscn")
 
 
 func _on_boton_salir_pressed() -> void:

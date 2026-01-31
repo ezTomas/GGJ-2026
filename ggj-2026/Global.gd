@@ -6,6 +6,8 @@ var time: float = 300
 var minutes: float = 0
 var seconds: int = 0
 var msec: int = 0
+var ranking : Array[int] = []
+
 
 func _process(delta: float) -> void:
 	time -= delta

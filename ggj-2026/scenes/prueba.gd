@@ -12,14 +12,19 @@ func _ready() -> void:
 	avance()
 	label.text = (str(Global.points))
 
+
+
 func _physics_process(delta: float) -> void:
 	if Global.time <= 0:
+		Global.ranking.append(Global.points)
+		Global.ranking.sort_custom(func (a,b): return a > b)
+		get_tree().change_scene_to_file("res://scenes/ranking.tscn")
 		Global.points = 0
 		label.text = (str(Global.points))
-		Global.time = 300
-	
-	
-	
+		Global.time = 3000
+		
+	print(Global.ranking)
+
 func spawn_aleatorio_mask_fakes(cantidad):
 	for i in cantidad:
 		var new_objeto = mask_fake.instantiate()
