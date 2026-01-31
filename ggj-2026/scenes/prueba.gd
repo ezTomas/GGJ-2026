@@ -22,7 +22,7 @@ func _ready() -> void:
 	avance()
 	audios_reproduccion()
 	check_bien_()
-	
+	imagen_check_mal()
 
 	timer.text = (str(Global.points))
 	Global.juego_en_marcha = true
@@ -37,7 +37,8 @@ func _physics_process(delta: float) -> void:
 
 		timer.text = (str(Global.points))
 		Global.time = 3000
-
+	imagen_check_mal()
+	
 func spawn_mask(cantidad):
 	for i in range(cantidad): 
 		var index = Global.sprite_index % sprites_posibles.size()
@@ -75,13 +76,12 @@ func check_bien_():
 		audio_stream_player_2d.play()
 		Global.check_bien = false
 
-#func imagen_check_mal():
-	#if Global.check_mal == true:
-		#print(Global.points)
-		#check_mal_imageb.visible = true
-		#await  get_tree().create_timer(1.0).timeout
-		#check_mal_imageb.visible = false
-		#Global.check_mal = false
+func imagen_check_mal():
+	if Global.check_mal == true:
+		$Control/Check_mal_imageb.visible = true
+		await  get_tree().create_timer(0.5).timeout
+		$Control/Check_mal_imageb.visible = false
+		Global.check_mal = false
 
 
 func avance():

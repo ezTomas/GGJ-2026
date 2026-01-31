@@ -8,7 +8,7 @@ var click : bool
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click") and click == true:
 		check_mal.play()
-		#Global.check_mal = true
+		Global.check_mal = true
 		Global.time -= 5
 
 

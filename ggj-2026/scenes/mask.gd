@@ -29,6 +29,7 @@ func _input(event: InputEvent) -> void:
 		puntos()
 		Global.sprite_index += 1
 		Global.check_bien = true
+		Global.check_mal = false
 		get_tree().reload_current_scene()
 
 		
