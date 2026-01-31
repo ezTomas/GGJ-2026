@@ -6,6 +6,8 @@ var time: float = 300
 var minutes: float = 0
 var seconds: int = 0
 var msec: int = 0
+var ranking : Array[int] = []
+
 
 
 var sprite_index: int = 0
