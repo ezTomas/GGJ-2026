@@ -25,8 +25,9 @@ func spawn_mask():
 func _input(event: InputEvent) -> void:
 	if Input.is_action_just_pressed("click") and kill:
 		puntos()
+		Global.sprite_index += 1
 		get_tree().reload_current_scene()
-		
+
 		
 
 func _on_mouse_entered() -> void:

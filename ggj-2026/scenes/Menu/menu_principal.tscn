@@ -24,7 +24,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-scale = Vector2(0.9971634, 1.0036964)
+scale = Vector2(1.0019691, 1.0000285)
 texture = ExtResource("2_6rkf3")
 expand_mode = 1
 
